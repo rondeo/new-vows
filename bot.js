@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = ['!nhelp','','Vows System'];
+    var setGame = ['.help','','Vows System'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -771,7 +771,7 @@ message.react("?")
 client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('!nrolebc')){
+if (message.content.startsWith('.rolebc')){
 if(!message.author.id === '502509585370841098') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -780,7 +780,7 @@ m.sendMessage(args)
 }
 });
 client.on("message", message => {
-    if (message.content.startsWith("!nobc")) {
+    if (message.content.startsWith(".nobc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -793,7 +793,7 @@ client.on("message", message => {
   });
   client.on("message", message => {
   
-              if (message.content.startsWith("!nbc")) {
+              if (message.content.startsWith(".nbc")) {
                            if (!message.member.hasPermission("ADMINISTRATOR"))  return;
     let args = message.content.split(" ").slice(1);
     var argresult = args.join(' '); 
@@ -2835,45 +2835,6 @@ message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
-}
-});
-client.on('message', message => {
-  if (!message.content.startsWith(prefix)) return;
-  var args = message.content.split(' ').slice(1);
-  var argresult = args.join(' ');
-  if (message.author.id == 410835593451405312) return;
-
-
-if (message.content.startsWith(prefix + 'playing')) {
-if (message.author.id !== '434845976050794516') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-client.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
-} else
-
-if (message.content.startsWith(prefix + 'streem')) {
-if (message.author.id !== '434845976050794516') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-client.user.setGame(argresult, "http://twitch.tv/y04zgamer");
-    message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
-} else
-
-if (message.content.startsWith(prefix + 'setname')) {
-if (message.author.id !== '434845976050794516') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-  client.user.setUsername(argresult).then
-      message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
-  return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
-} else
-
-if (message.content.startsWith(prefix + 'setavatar')) {
-if (message.author.id !== '434845976050794516') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-client.user.setAvatar(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
-} else
-
-
-if (message.content.startsWith(prefix + 'watching')) {
-if (message.author.id !== '434845976050794516') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-    client.user.setActivity(argresult, {type : 'watching'});
- message.channel.sendMessage(`**${argresult}** : تم تغيير الووتشينق الى`)
 }
 });
 client.on('message', async message => {
