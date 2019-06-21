@@ -780,7 +780,7 @@ m.sendMessage(args)
 }
 });
 client.on("message", message => {
-    if (message.content.startsWith(".nobc")) {
+    if (message.content.startsWith(".obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -793,7 +793,7 @@ client.on("message", message => {
   });
   client.on("message", message => {
   
-              if (message.content.startsWith(".nbc")) {
+              if (message.content.startsWith(".bc")) {
                            if (!message.member.hasPermission("ADMINISTRATOR"))  return;
     let args = message.content.split(" ").slice(1);
     var argresult = args.join(' '); 
