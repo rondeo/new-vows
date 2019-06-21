@@ -3426,7 +3426,7 @@ client.on('guildMemberAdd', member => {
 return channel.send("")
     }
     )});
-	const adminprefix = "!n";
+	const adminprefix = ".";
 const developers = ["485527276868468759,468599371353686017","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
