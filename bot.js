@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const devs = ['468599371353686017,485527276868468759'];
+const devs = ['468599371353686017'];
 const db = require('quick.db');
-const premium = ['485527276868468759,468599371353686017']
+const premium = ['468599371353686017']
 const client = new Discord.Client();   
 const bot = new Discord.Client();   
 const giphy = require('giphy-api')();    
@@ -3388,7 +3388,7 @@ return channel.send("")
     }
     )});
 	const adminprefix = ".";
-const developers = ["485527276868468759,468599371353686017","id"]
+const developers = ["468599371353686017","485527276868468759"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
